@@ -1,5 +1,12 @@
+import LogoutButton from "./logout";
+
 function Cliente(){
-    return <h1> Panel del Cliente</h1>
+    return (
+            <div>
+                <h1>Panel de Cliente</h1>
+                <LogoutButton />
+            </div>
+    );
 }
 
 export default Cliente;

@@ -1,5 +1,12 @@
+import LogoutButton from "./logout";
 function Admin(){
-    return <h1> Panel del Administrador</h1>
+    
+    return (
+            <div>
+                <h1>Panel de Administrador</h1>
+                <LogoutButton />
+            </div>
+    );
 }
 
 export default Admin;
