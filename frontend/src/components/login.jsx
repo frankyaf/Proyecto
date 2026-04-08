@@ -47,7 +47,7 @@ function Login() {
   return (
     <div className="container">
       <div className="login-box">
-        <h2>Iniciar Sesión</h2>
+        <h2 className="text-black">Iniciar Sesión</h2>
 
         <form onSubmit={handleLogin}>
           <input
@@ -64,7 +64,7 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
 
-          <button type="submit">Ingresar</button>
+          <button className="bg-sky-500 hover:bg-sky-700 text-gray-900 p-2 rounded-lg" type="submit">Ingresar</button>
         </form>
 
         {error && <p className="error">{error}</p>}

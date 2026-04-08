@@ -1,9 +1,9 @@
+@import "tailwindcss";
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f4f6f9;
+  background: #0f2d3c;
 }
-
 
 
 .container {
@@ -36,23 +36,12 @@ body {
   border-radius: 5px;
 }
 
-/* Botón */
-.login-box button {
-  width: 100%;
-  padding: 10px;
-  background: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
-.login-box button:hover {
-  background: #45a049;
-}
+
 
 /* Error */
 .error {
   color: red;
   margin-top: 10px;
 }
+
