@@ -26,11 +26,10 @@ function Login() {
 
         localStorage.setItem("access_token", data.access);
         localStorage.setItem("refresh_token", data.refresh);
-        //localStorage.setItem("user",JSON.stringify({username,typeUsers: data.typeUsers}));
-        //const typeUsers = data.typeUsers;
-        localStorage.setItem("typeUsuario", data.typeUsers)
-
-        if (data.typeUsuario === "admin") {
+        localStorage.setItem("user",JSON.stringify({username,typeUsers: data.typeUsers}));
+        
+        console.log("TYPE USER:", data.typeUsers);
+        if (data.typeUsers === "admin") {
           navigate("/admin");
         } else {
           navigate("/cliente");

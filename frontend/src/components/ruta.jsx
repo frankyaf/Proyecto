@@ -1,11 +1,13 @@
 import { Navigate } from "react-router-dom";
 
-function RutaProtegida({children,requiredType}){
+function RutaProtegida({children,tipo}){
     const token = localStorage.getItem("access_token");
-    const typeUsuario = localStorage.getItem("typeUsuario"); 
+    const user = JSON.parse(localStorage.getItem("user"));
 
-    if (!token) return <Navigate to="/login" />;
-    if (requiredType && typeUsuario !== requiredType) return <Navigate to="/" />;
+    if (!token) return <Navigate to="/" />;
+    if (tipo && user?.typeUsers !== tipo) {
+        return <Navigate to="/" />;
+    }
 
     return children;
 

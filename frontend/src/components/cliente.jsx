@@ -4,7 +4,7 @@ function Cliente(){
     return (
             <div>
                 <h1>Panel de Cliente</h1>
-                <LogoutButton />
+                <LogoutButton/>
             </div>
     );
 }

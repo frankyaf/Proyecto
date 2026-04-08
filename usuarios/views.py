@@ -1,10 +1,10 @@
-from django.contrib.auth import authenticate
-#from rest_framework.decorators import api_view
+from django.contrib.auth import authenticate, login
+from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from rest_framework_simplejwt.tokens import RefreshToken
+from usuarios.models import Usuarios
+
 from rest_framework_simplejwt.views import TokenObtainPairView
-from usuarios.serializers import CustomTokenObtainPairSerializer
-#from usuarios.models import Usuarios
+from usuarios.serializers import MyTokenObtainPairSerializer
 
 """@api_view(['POST'])
 def login_api(request):
@@ -16,13 +16,11 @@ def login_api(request):
     if user is not None:
         try:
             tipo = Usuarios.objects.get(user=user).typeUsers
+            print(tipo)
         except Usuarios.DoesNotExist:
             tipo = "cliente"
 
-        refresh = RefreshToken.for_user(user)
         return Response({
-            "access": str(refresh.access_token),
-            "refresh": str(refresh),
             "username": user.username,
             "typeUsers": tipo
         })
@@ -30,5 +28,6 @@ def login_api(request):
         return Response({"error": "Error"},status=400)
 """
 
-class CustomTokenObtainPairView(TokenObtainPairView):
-    serializer_class = CustomTokenObtainPairSerializer
+class MyTokenObtenPairView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer
+

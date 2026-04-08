@@ -10,11 +10,11 @@ function App(){
   return(
   <BrowserRouter>
     <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Login/>} />
         <Route
           path="/admin"
           element={
-            <RutaProtegida requiredType="admin">
+            <RutaProtegida tipo="admin">
               <Admin />
             </RutaProtegida>
           }
@@ -22,7 +22,7 @@ function App(){
         <Route
           path="/cliente"
           element={
-            <RutaProtegida requiredType="cliente">
+            <RutaProtegida tipo="cliente">
               <Cliente />
             </RutaProtegida>
           }
