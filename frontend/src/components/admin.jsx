@@ -1,5 +1,7 @@
 import LogoutButton from "./logout";
 import TablaProductos from "./obtain";
+import TablaComidas from "./obtaincomidas";
+import TablaPedidos from "./obtainpedidos";
 import RutaProtegida from "./ruta"; 
 
 function Admin(){
@@ -27,6 +29,14 @@ function Admin(){
             <section>
                 <RutaProtegida tipo="admin">
                     <TablaProductos/>
+                </RutaProtegida>
+
+                <RutaProtegida tipo="admin">
+                    <TablaPedidos/>
+                </RutaProtegida>
+
+                <RutaProtegida tipo="admin">
+                    <TablaComidas/>
                 </RutaProtegida>
             </section>
 
