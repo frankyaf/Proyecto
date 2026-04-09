@@ -27,13 +27,13 @@ function Navbar(){
       {/* Opciones ADMIN */}
       {tipo === "admin" && (
         <div className='col-start-3 w-auto'>
-          <Link to="/admin" >
+          <Link to="/admin" className='bg-[#41d791] p-2 m-2 rounded-lg'>
             Dashboard
           </Link>
-          <Link to="/usuarios">
+          <Link to="/usuarios" className='bg-[#41d791] p-2 m-2 rounded-lg'>
             Usuarios
           </Link>
-          <Link to="/reportes">
+          <Link to="/reportes" className='bg-[#41d791] p-2 m-2 rounded-lg'>
             Reportes
           </Link>
         </div>

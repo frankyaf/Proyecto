@@ -1,25 +1,12 @@
-"""
-from django.contrib import admin
-from django.urls import path
-from usuarios.views import login_api
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/login/',login_api, name = "login"),
-]
-"""
-#from django.contrib import admin
-from django.urls import path
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView,
-    TokenRefreshView,
-)
-#from usuarios.views import login_api
+from django.urls import path,include
 from usuarios.views import MyTokenObtenPairView
+from rest_framework.routers import DefaultRouter
+from comida.views import Usuario_dbViewSet
+
+router = DefaultRouter()
+router.register(r'usuarios_db',Usuario_dbViewSet)
 
 urlpatterns =[
     path('api/login/token/', MyTokenObtenPairView.as_view(), name='token_obtain_pair'),
-    #path('api/login/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    #path('api/login/',login_api, name = "login"),
-
+    path('api/', include(router.urls)),
 ]
