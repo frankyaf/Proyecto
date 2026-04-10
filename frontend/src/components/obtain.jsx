@@ -12,15 +12,15 @@ function TablaProductos(){
     },[]);
 
     return(
-        <div className="relative flex flex-col w-2rem h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
+        <div className="flex flex-1 w-2rem h-full text-gray-700 bg-[#c8d2d7] shadow-md rounded-xl bg-clip-border p-10 m-10">
             
         <h2>Usuarios</h2>
 
         <table className="w-full text-left table-auto min-w-max">
             <thead>
             <tr>
-                <th className="p-4 border-b border-blue-gray-100 bg-blue-gray-50">ID</th>
-                <th className="p-4 border-b border-blue-gray-100 bg-blue-gray-50">Tipo de usuario</th>
+                <th className="p-4 border-b border-b-gray-100  bg-">ID</th>
+                <th className="p-4 border-b border-b-gray-100  bg-blue-gray-50">Tipo de usuario</th>
             </tr>
             </thead>
 

@@ -7,6 +7,7 @@ import Navbar from "./components/navbar"
 import { useEffect, useState } from "react";
 
 
+
 function App(){
     const [user, setUser] = useState(null);
 
@@ -38,6 +39,7 @@ function App(){
             }
           />
       </Routes>
+      
     </BrowserRouter>
   );
 }

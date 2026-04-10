@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/*@plugin "daisyui";*/
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -15,7 +17,7 @@ body {
 
 /* Caja del login */
 .login-box {
-  background: white;
+  background: #c8d2d7;
   padding: 30px;
   border-radius: 10px;
   width: 300px;
@@ -32,12 +34,10 @@ body {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #0f2d3c;
   border-radius: 5px;
+  color: #0f2d3c;
 }
-
-
-
 
 /* Error */
 .error {

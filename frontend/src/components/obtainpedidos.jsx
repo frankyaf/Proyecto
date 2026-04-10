@@ -12,7 +12,7 @@ function TablaPedidos(){
     },[]);
 
     return(
-        <div className="relative flex flex-col w-2rem h-full overflow-scroll text-gray-700 bg-white shadow-md rounded-xl bg-clip-border">
+        <div className="flex flex-1 h-full text-gray-700 bg-[#c8d2d7] shadow-md rounded-xl bg-clip-border m-10 p-10">
             
         <h2>Pedidos</h2>
 
@@ -21,6 +21,7 @@ function TablaPedidos(){
             <tr>
                 <th className="p-4 border-b border-blue-gray-100 bg-blue-gray-50">ID Pedidos</th>
                 <th className="p-4 border-b border-blue-gray-100 bg-blue-gray-50">ID Usuario</th>
+                
             </tr>
             </thead>
 
